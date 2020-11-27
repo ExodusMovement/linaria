@@ -15,12 +15,11 @@ function prepareForShake(
 
   transformOptions.ast = true;
   transformOptions.presets!.unshift([
-    '@babel/preset-env',
-    {
-      targets: 'ie 11',
+    // Modified to remove @babel/preset-env
+    () => ({
       // we need this plugin so we list it explicitly, explanation in `evaluators/extractor/index`
-      include: ['@babel/plugin-transform-template-literals'],
-    },
+      plugins: ['@babel/plugin-transform-template-literals'],
+    }),
   ]);
   transformOptions.presets!.unshift([
     require.resolve('@linaria/preeval'),
