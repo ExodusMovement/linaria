@@ -59,12 +59,6 @@
     "@typescript-eslint/experimental-utils": "^4.28.0",
     "git-raw-commits": "^2.0.3"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn check:all"
-    }
-  },
   "workspaces": [
     "./packages/*",
     "./website"
