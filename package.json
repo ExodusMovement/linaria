@@ -60,8 +60,7 @@
     "git-raw-commits": "^2.0.3"
   },
   "workspaces": [
-    "./packages/*",
-    "./website"
+    "./packages/*"
   ],
   "dependencies": {
     "git-raw-commits": "^2.0.3"
