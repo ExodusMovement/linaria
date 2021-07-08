@@ -8,6 +8,7 @@
     "packages/*/types/**"
   ],
   "compilerOptions": {
+    "sourceMap": false,
     "baseUrl": ".",
     "composite": true,
     "paths": {
