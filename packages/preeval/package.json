@@ -1,6 +1,6 @@
 {
   "name": "@exodus/linaria-preeval",
-  "version": "3.0.0-beta.7.exodus.1",
+  "version": "3.0.0-beta.7.exodus.2",
   "description": "Blazing fast zero-runtime CSS in JS library",
   "main": "lib/index.js",
   "files": [
