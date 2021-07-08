@@ -12,7 +12,7 @@ import { parseSync, transformFromAstSync } from '@babel/core';
 import stylis from 'stylis';
 import type { Mapping } from 'source-map';
 import { SourceMapGenerator } from 'source-map';
-import { debug } from '@linaria/logger';
+import { debug } from '@exodus/linaria-logger';
 import loadOptions from './utils/loadOptions';
 import type { LinariaMetadata, Options, PreprocessorFn, Result } from './types';
 

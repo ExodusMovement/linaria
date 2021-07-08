@@ -1,4 +1,4 @@
-import { styled } from '@linaria/react';
+import { styled } from '@exodus/linaria-react';
 
 const selectors = ['a', 'b'];
 

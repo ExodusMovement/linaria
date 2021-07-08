@@ -1,17 +1,10 @@
 {
-  "name": "@linaria/shaker",
-  "version": "3.0.0-beta.0",
-  "publishConfig": {
-    "access": "public"
-  },
+  "name": "@exodus/linaria-shaker",
+  "version": "3.0.0-exodus.beta.0",
   "description": "Blazing fast zero-runtime CSS in JS library",
   "main": "lib/index.js",
-  "module": "esm/index.js",
-  "types": "types",
   "files": [
-    "types/",
-    "lib/",
-    "esm/"
+    "lib/**/*.js"
   ],
   "license": "MIT",
   "repository": "git@github.com:callstack/linaria.git",
@@ -45,9 +38,9 @@
   "dependencies": {
     "@babel/generator": ">=7",
     "@babel/plugin-transform-runtime": ">=7",
-    "@linaria/babel": "^3.0.0-beta.0",
-    "@linaria/logger": "^3.0.0-beta.0",
-    "@linaria/preeval": "^3.0.0-beta.0",
+    "@exodus/linaria-babel": "^3.0.0-exodus.beta.0",
+    "@exodus/linaria-logger": "^3.0.0-exodus.beta.0",
+    "@exodus/linaria-preeval": "^3.0.0-exodus.beta.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
   },
   "peerDependencies": {

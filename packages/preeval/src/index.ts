@@ -4,14 +4,14 @@
  */
 import type { NodePath } from '@babel/traverse';
 import type { Program } from '@babel/types';
-import type { State, StrictOptions } from '@linaria/babel';
+import type { State, StrictOptions } from '@exodus/linaria-babel';
 import {
   GenerateClassNames,
   DetectStyledImportName,
   JSXElement,
   ProcessStyled,
   ProcessCSS,
-} from '@linaria/babel';
+} from '@exodus/linaria-babel';
 import { Core } from './babel';
 
 function index(babel: Core, options: StrictOptions) {

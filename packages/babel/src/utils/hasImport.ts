@@ -2,8 +2,8 @@ import { dirname } from 'path';
 import Module from '../module';
 
 const linariaLibs = new Set([
-  '@linaria/core',
-  '@linaria/react',
+  '@exodus/linaria-core',
+  '@exodus/linaria-react',
   'linaria',
   'linaria/react',
 ]);

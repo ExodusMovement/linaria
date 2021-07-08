@@ -5,7 +5,7 @@
  */
 import type { ConfigAPI, TransformCaller } from '@babel/core';
 
-import { debug } from '@linaria/logger';
+import { debug } from '@exodus/linaria-logger';
 import type { PluginOptions } from './utils/loadOptions';
 import loadOptions from './utils/loadOptions';
 

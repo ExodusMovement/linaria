@@ -1,6 +1,6 @@
 import { types as t } from '@babel/core';
 import type { AssignmentExpression, Node, VisitorKeys } from '@babel/types';
-import { isNode, getVisitorKeys } from '@linaria/babel';
+import { isNode, getVisitorKeys } from '@exodus/linaria-babel';
 import DepsGraph from './DepsGraph';
 import GraphBuilderState from './GraphBuilderState';
 import { getVisitors } from './Visitors';

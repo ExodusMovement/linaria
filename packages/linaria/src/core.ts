@@ -1,1 +1,1 @@
-export * from '@linaria/core';
+export * from '@exodus/linaria-core';

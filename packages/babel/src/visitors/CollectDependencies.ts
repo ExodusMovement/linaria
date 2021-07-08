@@ -9,7 +9,7 @@ import type {
   TaggedTemplateExpression,
 } from '@babel/types';
 import type { NodePath } from '@babel/traverse';
-import { debug } from '@linaria/logger';
+import { debug } from '@exodus/linaria-logger';
 import throwIfInvalid from '../utils/throwIfInvalid';
 import type { State, StrictOptions, ExpressionValue } from '../types';
 import { ValueType } from '../types';

@@ -7,7 +7,7 @@ import type {
 import type { TransformOptions } from '@babel/core';
 import type { NodePath } from '@babel/traverse';
 import type { VisitorKeys } from '@babel/types';
-import type { StyledMeta } from '@linaria/core';
+import type { StyledMeta } from '@exodus/linaria-core';
 import type { RawSourceMap } from 'source-map';
 import type { PluginOptions } from './utils/loadOptions';
 

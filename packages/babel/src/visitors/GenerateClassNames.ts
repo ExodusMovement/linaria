@@ -8,7 +8,7 @@
 import { basename, dirname, relative } from 'path';
 import type { TaggedTemplateExpression } from '@babel/types';
 import type { NodePath } from '@babel/traverse';
-import { debug } from '@linaria/logger';
+import { debug } from '@exodus/linaria-logger';
 import type { State, StrictOptions } from '../types';
 import toValidCSSIdentifier from '../utils/toValidCSSIdentifier';
 import slugify from '../utils/slugify';

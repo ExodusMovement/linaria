@@ -1,6 +1,6 @@
 # CLI
 
-Linaria CLI (`@linaria/cli`) allows you to extract CSS from your source files using a command line.
+Linaria CLI (`@exodus/linaria-cli`) allows you to extract CSS from your source files using a command line.
 
 ### Usage
 

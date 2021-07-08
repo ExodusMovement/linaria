@@ -1,5 +1,5 @@
-import webpack4Loader from '@linaria/webpack4-loader';
-import webpack5Loader from '@linaria/webpack5-loader';
+import webpack4Loader from '@exodus/linaria-webpack4-loader';
+import webpack5Loader from '@exodus/linaria-webpack5-loader';
 
 type W4This = ThisParameterType<typeof webpack4Loader>;
 type W4Params = Parameters<typeof webpack4Loader>;

@@ -1,7 +1,7 @@
 import type { Node, Program } from '@babel/types';
 import generator from '@babel/generator';
-import { debug } from '@linaria/logger';
-import { isNode, getVisitorKeys } from '@linaria/babel';
+import { debug } from '@exodus/linaria-logger';
+import { isNode, getVisitorKeys } from '@exodus/linaria-babel';
 import build from './graphBuilder';
 import dumpNode from './dumpNode';
 

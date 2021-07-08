@@ -1,5 +1,5 @@
 import { createHash } from 'crypto';
-import { debug } from '@linaria/logger';
+import { debug } from '@exodus/linaria-logger';
 
 const fileHashes = new Map<string, string>();
 const evalCache = new Map<string, any>();

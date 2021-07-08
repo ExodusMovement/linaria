@@ -2,7 +2,7 @@
 
 ## stylelint
 
-For linting styles with [stylelint](https://stylelint.io/), we provide our custom config tailored for linaria - `@linaria/stylelint`.
+For linting styles with [stylelint](https://stylelint.io/), we provide our custom config tailored for linaria - `@exodus/linaria-stylelint`.
 
 ### Installation
 
@@ -14,7 +14,7 @@ yarn add --dev stylelint stylelint-config-recommended
 
 ### Configuring stylelint
 
-All you need to do is to set your config to extend from `@linaria/stylelint`.
+All you need to do is to set your config to extend from `@exodus/linaria-stylelint`.
 
 Here's the example `.stylelintrc` configuration file:
 
@@ -22,7 +22,7 @@ Here's the example `.stylelintrc` configuration file:
 {
   "extends": [
     "stylelint-config-recommended",
-    "@linaria/stylelint"
+    "@exodus/linaria-stylelint"
   ]
 }
 ```

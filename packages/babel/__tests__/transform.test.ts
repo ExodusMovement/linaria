@@ -59,7 +59,7 @@ describe('transformUrl', () => {
 it('rewrites a relative path in url() declarations', async () => {
   const { cssText } = await transform(
     dedent`
-    import { css } from '@linaria/core';
+    import { css } from '@exodus/linaria-core';
 
     export const title = css\`
       background-image: url(./assets/test.jpg);
@@ -82,7 +82,7 @@ it('rewrites a relative path in url() declarations', async () => {
 it('rewrites multiple relative paths in url() declarations', async () => {
   const { cssText } = await transform(
     dedent`
-    import { css } from '@linaria/core';
+    import { css } from '@exodus/linaria-core';
 
     export const title = css\`
       @font-face {
@@ -106,7 +106,7 @@ it('rewrites multiple relative paths in url() declarations', async () => {
 it("doesn't rewrite an absolute path in url() declarations", async () => {
   const { cssText } = await transform(
     dedent`
-    import { css } from '@linaria/core';
+    import { css } from '@exodus/linaria-core';
 
     export const title = css\`
       background-image: url(/assets/test.jpg);
@@ -130,7 +130,7 @@ it('respects passed babel options', async () => {
   expect(() =>
     transform(
       dedent`
-      import { css } from '@linaria/core';
+      import { css } from '@exodus/linaria-core';
 
       export const error = <jsx />;
       `,
@@ -154,7 +154,7 @@ it('respects passed babel options', async () => {
   expect(() =>
     transform(
       dedent`
-      import { css } from '@linaria/core';
+      import { css } from '@exodus/linaria-core';
 
       export const error = <jsx />;
       export const title = css\`
@@ -186,7 +186,7 @@ it("doesn't throw due to duplicate preset", async () => {
   expect(() =>
     transform(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       const Title = styled.h1\` color: blue; \`;
 
@@ -218,7 +218,7 @@ it("doesn't throw due to duplicate preset", async () => {
 it('should return transformed code even when file only contains unused linaria code', async () => {
   const { code } = await transform(
     dedent`
-    import { css } from '@linaria/core';
+    import { css } from '@exodus/linaria-core';
 
     const title = css\`
       color: red;
