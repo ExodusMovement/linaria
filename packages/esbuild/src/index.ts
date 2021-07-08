@@ -6,8 +6,8 @@
 
 import path from 'path';
 import fs from 'fs';
-import type { PluginOptions, Preprocessor } from '@linaria/babel-preset';
-import { slugify, transform } from '@linaria/babel-preset';
+import type { PluginOptions, Preprocessor } from '@exodus/linaria-babel-preset';
+import { slugify, transform } from '@exodus/linaria-babel-preset';
 import { transformSync, Plugin, TransformOptions, Loader } from 'esbuild';
 
 type EsbuildPluginOptions = {

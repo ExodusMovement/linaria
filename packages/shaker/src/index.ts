@@ -1,9 +1,9 @@
 import generator from '@babel/generator';
 import { transformSync } from '@babel/core';
 import type { Program } from '@babel/types';
-import { debug } from '@linaria/logger';
-import type { Evaluator, StrictOptions } from '@linaria/babel-preset';
-import { buildOptions } from '@linaria/babel-preset';
+import { debug } from '@exodus/linaria-logger';
+import type { Evaluator, StrictOptions } from '@exodus/linaria-babel-preset';
+import { buildOptions } from '@exodus/linaria-babel-preset';
 import shake from './shaker';
 
 function prepareForShake(
@@ -22,7 +22,7 @@ function prepareForShake(
     }),
   ]);
   transformOptions.presets!.unshift([
-    require.resolve('@linaria/preeval'),
+    require.resolve('@exodus/linaria-preeval'),
     options,
   ]);
   transformOptions.plugins!.unshift(

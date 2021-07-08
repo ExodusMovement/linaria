@@ -1,5 +1,5 @@
 {
-  "name": "@linaria/shaker",
+  "name": "@exodus/linaria-shaker",
   "version": "3.0.0-beta.7",
   "publishConfig": {
     "access": "public"
@@ -47,9 +47,9 @@
     "@babel/plugin-transform-runtime": ">=7",
     "@babel/plugin-transform-template-literals": ">=7",
     "@babel/preset-env": ">=7",
-    "@linaria/babel-preset": "^3.0.0-beta.7",
-    "@linaria/logger": "^3.0.0-beta.3",
-    "@linaria/preeval": "^3.0.0-beta.7",
+    "@exodus/linaria-babel-preset": "^3.0.0-beta.7",
+    "@exodus/linaria-logger": "^3.0.0-beta.3",
+    "@exodus/linaria-preeval": "^3.0.0-beta.7",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
   },
   "peerDependencies": {

@@ -1,4 +1,4 @@
-import loader from '@linaria/webpack4-loader';
+import loader from '@exodus/linaria-webpack4-loader';
 
 export default loader;
-export * from '@linaria/webpack4-loader';
+export * from '@exodus/linaria-webpack4-loader';

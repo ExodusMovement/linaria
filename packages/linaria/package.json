@@ -42,15 +42,15 @@
     "watch": "yarn build --watch"
   },
   "dependencies": {
-    "@linaria/babel-preset": "^3.0.0-beta.7",
-    "@linaria/core": "^3.0.0-beta.4",
-    "@linaria/extractor": "^3.0.0-beta.7",
-    "@linaria/react": "^3.0.0-beta.7",
-    "@linaria/rollup": "^3.0.0-beta.7",
-    "@linaria/server": "^3.0.0-beta.3",
-    "@linaria/shaker": "^3.0.0-beta.7",
-    "@linaria/stylelint": "^3.0.0-beta.7",
-    "@linaria/webpack4-loader": "^3.0.0-beta.7"
+    "@exodus/linaria-babel-preset": "^3.0.0-beta.7",
+    "@exodus/linaria-core": "^3.0.0-beta.4",
+    "@exodus/linaria-extractor": "^3.0.0-beta.7",
+    "@exodus/linaria-react": "^3.0.0-beta.7",
+    "@exodus/linaria-rollup": "^3.0.0-beta.7",
+    "@exodus/linaria-server": "^3.0.0-beta.3",
+    "@exodus/linaria-shaker": "^3.0.0-beta.7",
+    "@exodus/linaria-stylelint": "^3.0.0-beta.7",
+    "@exodus/linaria-webpack4-loader": "^3.0.0-beta.7"
   },
   "peerDependencies": {
     "@babel/core": ">=7"

@@ -1,1 +1,1 @@
-export * from '@linaria/stylelint';
+export * from '@exodus/linaria-stylelint';

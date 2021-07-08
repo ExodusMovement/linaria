@@ -6,8 +6,8 @@
  */
 import * as React from 'react';
 import validAttr from '@emotion/is-prop-valid';
-import { cx } from '@linaria/core';
-import type { CSSProperties, StyledMeta } from '@linaria/core';
+import { cx } from '@exodus/linaria-core';
+import type { CSSProperties, StyledMeta } from '@exodus/linaria-core';
 
 export type NoInfer<A extends any> = [A][A extends any ? 0 : never];
 

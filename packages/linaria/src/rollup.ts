@@ -1,4 +1,4 @@
-import loader from '@linaria/rollup';
+import loader from '@exodus/linaria-rollup';
 
 export default loader;
-export * from '@linaria/rollup';
+export * from '@exodus/linaria-rollup';

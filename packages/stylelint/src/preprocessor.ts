@@ -1,6 +1,6 @@
 import stripAnsi from 'strip-ansi';
-import { transform } from '@linaria/babel-preset';
-import type { Replacement } from '@linaria/babel-preset';
+import { transform } from '@exodus/linaria-babel-preset';
+import type { Replacement } from '@exodus/linaria-babel-preset';
 
 type Errors = {
   [key: string]:

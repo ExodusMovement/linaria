@@ -22,7 +22,7 @@ const transpile = async (
 it('transpiles styled template literal with object', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const Title = styled.h1\`
       font-size: 14px;
@@ -37,7 +37,7 @@ it('transpiles styled template literal with object', async () => {
 it('uses string passed in as classNameSlug', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const Title = styled('h1')\`
       font-size: 14px;
@@ -53,7 +53,7 @@ it('uses string passed in as classNameSlug', async () => {
 it('handles fn passed in as classNameSlug', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const Title = styled('h1')\`
       font-size: 14px;
@@ -73,7 +73,7 @@ it('handles fn passed in as classNameSlug', async () => {
 it('transpiles styled template literal with function and tag', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const Title = styled('h1')\`
       font-size: 14px;
@@ -88,7 +88,7 @@ it('transpiles styled template literal with function and tag', async () => {
 it('transpiles renamed styled import', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled as custom } from '@linaria/react';
+    import { styled as custom } from '@exodus/linaria-react';
 
     export const Title = custom('h1')\`
       font-size: 14px;
@@ -103,7 +103,7 @@ it('transpiles renamed styled import', async () => {
 it('transpiles styled template literal with function and component', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
     const Heading = () => null;
 
     export const Title = styled(Heading)\`
@@ -119,7 +119,7 @@ it('transpiles styled template literal with function and component', async () =>
 it('outputs valid CSS classname', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const ΩPage$Title = styled.h1\`
       font-size: 14px;
@@ -134,7 +134,7 @@ it('outputs valid CSS classname', async () => {
 it('evaluates and inlines expressions in scope', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     const color = 'blue';
 
@@ -152,7 +152,7 @@ it('evaluates and inlines expressions in scope', async () => {
 it('inlines object styles as CSS string', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     const cover = {
       '--color-primaryText': '#222',
@@ -197,7 +197,7 @@ it('inlines object styles as CSS string', async () => {
 it('inlines array styles as CSS string', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     const styles = [
       { flex: 1 },
@@ -217,7 +217,7 @@ it('inlines array styles as CSS string', async () => {
 it('replaces unknown expressions with CSS custom properties', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const Title = styled.h1\`
       font-size: ${'${size}'}px;
@@ -233,7 +233,7 @@ it('replaces unknown expressions with CSS custom properties', async () => {
 it('handles interpolation followed by unit', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const Title = styled.h1\`
       font-size: ${'${size}'}em;
@@ -254,7 +254,7 @@ it('handles interpolation followed by unit', async () => {
 it('uses the same custom property for the same identifier', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const Box = styled.div\`
       height: ${'${size}'}px;
@@ -270,7 +270,7 @@ it('uses the same custom property for the same identifier', async () => {
 it('uses the same custom property for the same expression', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const Box = styled.div\`
       height: ${'${props => props.size}'}px;
@@ -286,7 +286,7 @@ it('uses the same custom property for the same expression', async () => {
 it('handles nested blocks', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const Button = styled.button\`
       font-family: ${'${regular}'};
@@ -309,7 +309,7 @@ it('handles nested blocks', async () => {
 it('prevents class name collision', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { styled } from '@linaria/react';
+    import { styled } from '@exodus/linaria-react';
 
     export const Title = styled.h1\`
       font-size: ${'${size}'}px;
@@ -346,7 +346,7 @@ it('does not output CSS if none present', async () => {
 it('does not output CSS property when value is a blank string', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { css } from '@linaria/core';
+    import { css } from '@exodus/linaria-core';
 
     export const title = css\`
       font-size: ${''};
@@ -362,7 +362,7 @@ it('does not output CSS property when value is a blank string', async () => {
 it('transpiles css template literal', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { css } from '@linaria/core';
+    import { css } from '@exodus/linaria-core';
 
     export const title = css\`
       font-size: 14px;
@@ -377,7 +377,7 @@ it('transpiles css template literal', async () => {
 it('handles css template literal in object property', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { css } from '@linaria/core';
+    import { css } from '@exodus/linaria-core';
 
     const components = {
       title: css\`
@@ -394,7 +394,7 @@ it('handles css template literal in object property', async () => {
 it('handles css template literal in JSX element', async () => {
   const { code, metadata } = await transpile(
     dedent`
-    import { css } from '@linaria/core';
+    import { css } from '@exodus/linaria-core';
 
     <Title class={css\` font-size: 14px; \`} />
     `
@@ -410,7 +410,7 @@ it('throws when contains dynamic expression without evaluate: true in css tag', 
   try {
     await transpile(
       dedent`
-      import { css } from '@linaria/core';
+      import { css } from '@exodus/linaria-core';
 
       const title = css\`
         font-size: ${'${size}'}px;
@@ -427,8 +427,8 @@ it('throws when contains dynamic expression without evaluate: true in css tag', 
 it('supports both css and styled tags', async () => {
   const { code, metadata } = await transpile(
     dedent`
-      import { css } from '@linaria/core';
-      import { styled } from '@linaria/react';
+      import { css } from '@exodus/linaria-core';
+      import { styled } from '@exodus/linaria-react';
 
       export const Title = styled.h1\`
         font-size: 14px;
@@ -447,8 +447,8 @@ it('supports both css and styled tags', async () => {
 it('does not include styles if not referenced anywhere', async () => {
   const { code, metadata } = await transpile(
     dedent`
-      import { css } from '@linaria/core';
-      import { styled } from '@linaria/react';
+      import { css } from '@exodus/linaria-core';
+      import { styled } from '@exodus/linaria-react';
 
       const Title = styled.h1\`
         font-size: 14px;
@@ -467,8 +467,8 @@ it('does not include styles if not referenced anywhere', async () => {
 it('includes unreferenced styles for :global', async () => {
   const { code, metadata } = await transpile(
     dedent`
-      import { css } from '@linaria/core';
-      import { styled } from '@linaria/react';
+      import { css } from '@exodus/linaria-core';
+      import { styled } from '@exodus/linaria-react';
 
       const a = css\`
         :global() {
@@ -493,7 +493,7 @@ it('includes unreferenced styles for :global', async () => {
 it('handles objects with numeric keys', async () => {
   const { code, metadata } = await transpile(
     dedent`
-      import { css } from '@linaria/core';
+      import { css } from '@exodus/linaria-core';
 
       export const object = {
         stringKey: css\`\`,
@@ -509,7 +509,7 @@ it('handles objects with numeric keys', async () => {
 it('handles objects with enums as keys', async () => {
   const { code, metadata } = await transpile(
     dedent`
-      import { css } from '@linaria/core';
+      import { css } from '@exodus/linaria-core';
       import { TestEnum } from './ts-data.ts';
 
       export const object = {

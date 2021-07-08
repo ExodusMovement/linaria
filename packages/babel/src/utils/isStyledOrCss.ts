@@ -28,7 +28,7 @@ export default function isStyledOrCss(
       tag.arguments.length === 1 &&
       tag.callee.name === localName &&
       hasImport(t, path.scope, state.file.opts.filename, localName, [
-        '@linaria/react',
+        '@exodus/linaria-react',
         'linaria/react',
       ])
     ) {
@@ -42,7 +42,7 @@ export default function isStyledOrCss(
       t.isIdentifier(tag.property) &&
       tag.object.name === localName &&
       hasImport(t, path.scope, state.file.opts.filename, localName, [
-        '@linaria/react',
+        '@exodus/linaria-react',
         'linaria/react',
       ])
     ) {
@@ -51,7 +51,7 @@ export default function isStyledOrCss(
       });
     } else if (
       hasImport(t, path.scope, state.file.opts.filename, 'css', [
-        '@linaria/core',
+        '@exodus/linaria-core',
         'linaria',
       ]) &&
       t.isIdentifier(tag) &&

@@ -15,8 +15,8 @@ import { parseSync, transformSync } from '@babel/core';
 import type { NodePath } from '@babel/traverse';
 import generator from '@babel/generator';
 
-import type { Evaluator } from '@linaria/babel-preset';
-import { buildOptions } from '@linaria/babel-preset';
+import type { Evaluator } from '@exodus/linaria-babel-preset';
+import { buildOptions } from '@exodus/linaria-babel-preset';
 import RequirementsResolver from './RequirementsResolver';
 
 function isMemberExpression(
@@ -63,7 +63,7 @@ function isLinariaPrevalExport(
 const extractor: Evaluator = (filename, options, text, only = null) => {
   const transformOptions = buildOptions(filename, options);
   transformOptions.presets!.unshift([
-    require.resolve('@linaria/preeval'),
+    require.resolve('@exodus/linaria-preeval'),
     options,
   ]);
   transformOptions.plugins!.unshift([

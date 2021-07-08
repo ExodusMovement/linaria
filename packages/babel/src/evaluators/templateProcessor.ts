@@ -6,8 +6,8 @@
 import type { Expression } from '@babel/types';
 import generator from '@babel/generator';
 
-import type { StyledMeta } from '@linaria/core';
-import { debug } from '@linaria/logger';
+import type { StyledMeta } from '@exodus/linaria-core';
+import { debug } from '@exodus/linaria-logger';
 import { units } from '../units';
 import type {
   State,

@@ -14,7 +14,7 @@ import type { Node, Program, Expression } from '@babel/types';
 import type { NodePath, Scope, Visitor } from '@babel/traverse';
 import { expression, statement } from '@babel/template';
 import generator from '@babel/generator';
-import { debug, error } from '@linaria/logger';
+import { debug, error } from '@exodus/linaria-logger';
 import evaluate from './evaluators';
 import getTemplateProcessor from './evaluators/templateProcessor';
 import Module from './module';

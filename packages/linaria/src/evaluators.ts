@@ -1,4 +1,4 @@
-import extractor from '@linaria/extractor';
-import shaker from '@linaria/shaker';
+import extractor from '@exodus/linaria-extractor';
+import shaker from '@exodus/linaria-shaker';
 
 export { extractor, shaker };

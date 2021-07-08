@@ -1,7 +1,7 @@
 // Dead code in this file should be ignored
 
 import deadDep from 'unknown-dependency';
-import { styled } from '@linaria/react';
+import { styled } from '@exodus/linaria-react';
 
 export const deadValue = deadDep();
 

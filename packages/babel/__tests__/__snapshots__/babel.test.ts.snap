@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`does not include styles if not referenced anywhere 1`] = `
-"import { css } from '@linaria/core';
-import { styled } from '@linaria/react';
+"import { css } from '@exodus/linaria-core';
+import { styled } from '@exodus/linaria-react';
 const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"t17gu1mi\\"
@@ -20,7 +20,7 @@ const title = String.raw\`This is something\`;"
 exports[`does not output CSS if none present 2`] = `Object {}`;
 
 exports[`does not output CSS property when value is a blank string 1`] = `
-"import { css } from '@linaria/core';
+"import { css } from '@exodus/linaria-core';
 export const title = \\"t17gu1mi\\";"
 `;
 
@@ -38,7 +38,7 @@ Dependencies: NA
 `;
 
 exports[`evaluates and inlines expressions in scope 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 const color = 'blue';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
@@ -60,7 +60,7 @@ Dependencies: NA
 `;
 
 exports[`handles css template literal in JSX element 1`] = `
-"import { css } from '@linaria/core';
+"import { css } from '@exodus/linaria-core';
 <Title class={\\"t17gu1mi\\"} />;"
 `;
 
@@ -75,7 +75,7 @@ Dependencies: NA
 `;
 
 exports[`handles css template literal in object property 1`] = `
-"import { css } from '@linaria/core';
+"import { css } from '@exodus/linaria-core';
 const components = {
   title: \\"t17gu1mi\\"
 };"
@@ -94,7 +94,7 @@ Dependencies: NA
 `;
 
 exports[`handles fn passed in as classNameSlug 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled('h1')({
   name: \\"Title\\",
   class: \\"t17gu1mi_42_Title\\"
@@ -114,7 +114,7 @@ Dependencies: NA
 `;
 
 exports[`handles interpolation followed by unit 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"t17gu1mi\\",
@@ -157,7 +157,7 @@ Dependencies: NA
 `;
 
 exports[`handles nested blocks 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Button = /*#__PURE__*/styled(\\"button\\")({
   name: \\"Button\\",
   class: \\"b17gu1mi\\",
@@ -188,7 +188,7 @@ Dependencies: NA
 `;
 
 exports[`handles objects with enums as keys 1`] = `
-"import { css } from '@linaria/core';
+"import { css } from '@exodus/linaria-core';
 import { TestEnum } from './ts-data.ts';
 export const object = {
   [TestEnum.FirstValue]: \\"t17gu1mi\\",
@@ -208,7 +208,7 @@ Dependencies: NA
 `;
 
 exports[`handles objects with numeric keys 1`] = `
-"import { css } from '@linaria/core';
+"import { css } from '@exodus/linaria-core';
 export const object = {
   stringKey: \\"s17gu1mi\\",
   42: \\"_ccybe9\\"
@@ -227,8 +227,8 @@ Dependencies: NA
 `;
 
 exports[`includes unreferenced styles for :global 1`] = `
-"import { css } from '@linaria/core';
-import { styled } from '@linaria/react';
+"import { css } from '@exodus/linaria-core';
+import { styled } from '@exodus/linaria-react';
 const a = \\"a17gu1mi\\";
 const B = /*#__PURE__*/styled(\\"div\\")({
   name: \\"B\\",
@@ -258,7 +258,7 @@ Dependencies: NA
 `;
 
 exports[`inlines array styles as CSS string 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 const styles = [{
   flex: 1
 }, {
@@ -284,7 +284,7 @@ Dependencies: NA
 `;
 
 exports[`inlines object styles as CSS string 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 const cover = {
   '--color-primaryText': '#222',
   position: 'absolute',
@@ -331,7 +331,7 @@ Dependencies: NA
 `;
 
 exports[`outputs valid CSS classname 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const ΩPage$Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"\\\\u03A9Page$Title\\",
   class: \\"\\\\u03C917gu1mi\\"
@@ -351,7 +351,7 @@ Dependencies: NA
 `;
 
 exports[`prevents class name collision 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"t17gu1mi\\",
@@ -390,7 +390,7 @@ Dependencies: NA
 `;
 
 exports[`replaces unknown expressions with CSS custom properties 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"t17gu1mi\\",
@@ -415,8 +415,8 @@ Dependencies: NA
 `;
 
 exports[`supports both css and styled tags 1`] = `
-"import { css } from '@linaria/core';
-import { styled } from '@linaria/react';
+"import { css } from '@exodus/linaria-core';
+import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"t17gu1mi\\"
@@ -449,7 +449,7 @@ exports[`throws when contains dynamic expression without evaluate: true in css t
 `;
 
 exports[`transpiles css template literal 1`] = `
-"import { css } from '@linaria/core';
+"import { css } from '@exodus/linaria-core';
 export const title = \\"t17gu1mi\\";"
 `;
 
@@ -466,7 +466,7 @@ Dependencies: NA
 `;
 
 exports[`transpiles renamed styled import 1`] = `
-"import { styled as custom } from '@linaria/react';
+"import { styled as custom } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/custom('h1')({
   name: \\"Title\\",
   class: \\"t17gu1mi\\"
@@ -486,7 +486,7 @@ Dependencies: NA
 `;
 
 exports[`transpiles styled template literal with function and component 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 
 const Heading = () => null;
 
@@ -509,7 +509,7 @@ Dependencies: NA
 `;
 
 exports[`transpiles styled template literal with function and tag 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled('h1')({
   name: \\"Title\\",
   class: \\"t17gu1mi\\"
@@ -529,7 +529,7 @@ Dependencies: NA
 `;
 
 exports[`transpiles styled template literal with object 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"t17gu1mi\\"
@@ -549,7 +549,7 @@ Dependencies: NA
 `;
 
 exports[`uses string passed in as classNameSlug 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled('h1')({
   name: \\"Title\\",
   class: \\"testSlug\\"
@@ -569,7 +569,7 @@ Dependencies: NA
 `;
 
 exports[`uses the same custom property for the same expression 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Box = /*#__PURE__*/styled(\\"div\\")({
   name: \\"Box\\",
   class: \\"b17gu1mi\\",
@@ -593,7 +593,7 @@ Dependencies: NA
 `;
 
 exports[`uses the same custom property for the same identifier 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Box = /*#__PURE__*/styled(\\"div\\")({
   name: \\"Box\\",
   class: \\"b17gu1mi\\",

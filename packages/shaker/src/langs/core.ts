@@ -22,7 +22,7 @@ import type {
   WhileStatement,
 } from '@babel/types';
 
-import { peek } from '@linaria/babel-preset';
+import { peek } from '@exodus/linaria-babel-preset';
 import type { IdentifierHandlers, Visitors } from '../types';
 import GraphBuilderState from '../GraphBuilderState';
 import ScopeManager from '../scope';

@@ -1,5 +1,5 @@
 {
-  "name": "@linaria/core",
+  "name": "@exodus/linaria-core",
   "version": "3.0.0-beta.4",
   "publishConfig": {
     "access": "public"

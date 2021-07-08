@@ -1,4 +1,4 @@
-import { run } from '@linaria/babel-preset/__utils__/strategy-tester';
+import { run } from '@exodus/linaria-babel-preset/__utils__/strategy-tester';
 import dedent from 'dedent';
 
 describe('shaker', () => {
@@ -6,8 +6,8 @@ describe('shaker', () => {
     it('should work with wildcard imports', async () => {
       const { code, metadata } = await transpile(
         dedent`
-      import { css } from "@linaria/core";
-      import * as mod from "@linaria/babel-preset/__fixtures__/complex-component";
+      import { css } from "@exodus/linaria-core";
+      import * as mod from "@exodus/linaria-babel-preset/__fixtures__/complex-component";
 
       export const square = css\`
         ${'${mod.Title}'} {
@@ -24,8 +24,8 @@ describe('shaker', () => {
     it('should interpolate imported components', async () => {
       const { code, metadata } = await transpile(
         dedent`
-      import { css } from "@linaria/core";
-      import { Title } from "@linaria/babel-preset/__fixtures__/complex-component";
+      import { css } from "@exodus/linaria-core";
+      import { Title } from "@exodus/linaria-babel-preset/__fixtures__/complex-component";
 
       export const square = css\`
         ${'${Title}'} {
@@ -42,8 +42,8 @@ describe('shaker', () => {
     it('should interpolate imported variables', async () => {
       const { code, metadata } = await transpile(
         dedent`
-      import { css } from "@linaria/core";
-      import { whiteColor } from "@linaria/babel-preset/__fixtures__/complex-component";
+      import { css } from "@exodus/linaria-core";
+      import { whiteColor } from "@exodus/linaria-babel-preset/__fixtures__/complex-component";
 
       export const square = css\`
         color: ${'${whiteColor}'}
@@ -58,7 +58,7 @@ describe('shaker', () => {
     it('evaluates typescript enums', async () => {
       const { code, metadata } = await transpile(
         dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       enum Colors {
         BLUE = '#27509A'

@@ -16,7 +16,7 @@ import vm from 'vm';
 import fs from 'fs';
 import path from 'path';
 import type { BabelFileResult } from '@babel/core';
-import { debug } from '@linaria/logger';
+import { debug } from '@exodus/linaria-logger';
 import * as EvalCache from './eval-cache';
 import * as process from './process';
 import type { Evaluator, StrictOptions } from './types';

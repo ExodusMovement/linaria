@@ -50,11 +50,11 @@ export function run(
               action: evaluator,
             },
             {
-              test: /\/node_modules\/(?!@linaria)/,
+              test: /\/node_modules\/(?!@exodus/linaria-)/,
               action: 'ignore',
             },
             {
-              test: /\/@linaria\/(?:core|react)\/\w+\.ts/,
+              test: /\/@exodus/linaria-\/(?:core|react)\/\w+\.ts/,
               action: (
                 filename: string,
                 options: StrictOptions,
@@ -92,7 +92,7 @@ export function run(
   it('evaluates identifier in scope', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       const answer = 42;
       const foo = () => answer;
@@ -112,7 +112,7 @@ export function run(
   it('hoistable identifiers', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       {
         var days = 42;
@@ -136,7 +136,7 @@ export function run(
     try {
       await transpile(
         dedent`
-        import { styled } from '@linaria/react';
+        import { styled } from '@exodus/linaria-react';
 
         {
           const days = 42;
@@ -159,7 +159,7 @@ export function run(
   it('evaluates babel helpers', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       function copyAndExtend(a, b) {
         return { ...a, ...b };
@@ -182,8 +182,8 @@ export function run(
   it('evaluates imported typescript enums', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
-      import { Colors } from '@linaria/babel-preset/__fixtures__/enums';
+      import { styled } from '@exodus/linaria-react';
+      import { Colors } from '@exodus/linaria-babel-preset/__fixtures__/enums';
 
       export const Title = styled.h1\`
         color: ${'${Colors.BLUE}'};
@@ -203,7 +203,7 @@ export function run(
   it('evaluates local expressions', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       const answer = 42;
       const foo = () => answer;
@@ -223,7 +223,7 @@ export function run(
   it('evaluates functions with nested identifiers', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       const objects = { key: { fontSize: 12 } };
       const foo = (k) => {
@@ -244,8 +244,8 @@ export function run(
   it('evaluates expressions with dependencies', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
-      import slugify from '@linaria/babel-preset/__fixtures__/slugify';
+      import { styled } from '@exodus/linaria-react';
+      import slugify from '@exodus/linaria-babel-preset/__fixtures__/slugify';
 
       export const Title = styled.h1\`
         &:before {
@@ -262,8 +262,8 @@ export function run(
   it('evaluates expressions with expressions depending on shared dependency', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
-      const slugify = require('@linaria/babel-preset/__fixtures__/slugify').default;
+      import { styled } from '@exodus/linaria-react';
+      const slugify = require('@exodus/linaria-babel-preset/__fixtures__/slugify').default;
 
       const boo = t => slugify(t) + 'boo';
       const bar = t => slugify(t) + 'bar';
@@ -283,8 +283,8 @@ export function run(
   it('evaluates multiple expressions with shared dependency', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
-      const slugify = require('@linaria/babel-preset/__fixtures__/slugify').default;
+      import { styled } from '@exodus/linaria-react';
+      const slugify = require('@exodus/linaria-babel-preset/__fixtures__/slugify').default;
 
       const boo = t => slugify(t) + 'boo';
       const bar = t => slugify(t) + 'bar';
@@ -305,7 +305,7 @@ export function run(
   it('evaluates interpolations with sequence expression', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       export const Title = styled.h1\`
         color: ${'${(external, () => "blue")}'};
@@ -320,7 +320,7 @@ export function run(
   it('evaluates dependencies with sequence expression', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       const color = (external, () => 'blue');
 
@@ -336,7 +336,7 @@ export function run(
   it('evaluates component interpolations', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      const { styled } = require('@linaria/react');
+      const { styled } = require('@exodus/linaria-react');
 
       export const Title = styled.h1\`
         color: red;
@@ -360,7 +360,7 @@ export function run(
     try {
       await transpile(
         dedent`
-        const { styled } = require('@linaria/react');
+        const { styled } = require('@exodus/linaria-react');
 
         let fontSize;
 
@@ -382,7 +382,7 @@ export function run(
     try {
       await transpile(
         dedent`
-        const { styled } = require('@linaria/react');
+        const { styled } = require('@exodus/linaria-react');
 
         const color = null;
 
@@ -404,7 +404,7 @@ export function run(
     try {
       await transpile(
         dedent`
-        const { styled } = require('@linaria/react');
+        const { styled } = require('@exodus/linaria-react');
 
         const height = NaN;
 
@@ -424,7 +424,7 @@ export function run(
     const { code, metadata } = await transpile(
       dedent`
       const { css } = require('..');
-      const { styled } = require('@linaria/react');
+      const { styled } = require('@exodus/linaria-react');
 
       const Title = styled.h1\`
         color: red;
@@ -447,7 +447,7 @@ export function run(
   it('handles indirect wrapping another styled component', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      const { styled } = require('@linaria/react');
+      const { styled } = require('@exodus/linaria-react');
 
       const Title = styled.h1\`
         color: red;
@@ -469,7 +469,7 @@ export function run(
   it('inlines object styles as CSS string', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       const fill = (top = 0, left = 0, right = 0, bottom = 0) => ({
         position: 'absolute',
@@ -492,7 +492,7 @@ export function run(
   it('inlines array styles as CSS string', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       const fill = (top = 0, left = 0, right = 0, bottom = 0) => [
         { position: 'absolute' },
@@ -517,7 +517,7 @@ export function run(
   it('ignores inline arrow function expressions', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       export const Title = styled.h1\`
         &:before {
@@ -536,7 +536,7 @@ export function run(
     const { code, metadata } = await transpile(
       dedent`
       import React from 'react';
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
       import constant from './broken-dependency';
 
       const FuncComponent = (props) => ${div};
@@ -571,7 +571,7 @@ export function run(
   it('ignores inline vanilla function expressions', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       export const Title = styled.h1\`
         &:before {
@@ -588,7 +588,7 @@ export function run(
   it('ignores external expressions', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       const generate = props => props.content;
 
@@ -607,7 +607,7 @@ export function run(
   it('evaluates complex styles with functions and nested selectors', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { css } from '@linaria/core';
+      import { css } from '@exodus/linaria-core';
       export const bareIconClass = css\`\`;
 
       const getSizeStyles = (fs) => ({
@@ -632,7 +632,7 @@ export function run(
     try {
       await transpile(
         dedent`
-        import { styled } from '@linaria/react';
+        import { styled } from '@exodus/linaria-react';
 
         const foo = props => { throw new Error('This will fail') };
 
@@ -681,7 +681,7 @@ export function run(
   it('derives display name from filename', async () => {
     const { code, metadata } = await transformAsync(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       export default styled.h1\`
         font-size: 14px;
@@ -700,7 +700,7 @@ export function run(
   it('derives display name from parent folder name', async () => {
     const { code, metadata } = await transformAsync(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       export default styled.h1\`
         font-size: 14px;
@@ -722,7 +722,7 @@ export function run(
     try {
       await transformAsync(
         dedent`
-        import { styled } from '@linaria/react';
+        import { styled } from '@exodus/linaria-react';
 
         export default styled.h1\`
           font-size: 14px;
@@ -743,7 +743,7 @@ export function run(
   it('does not strip instanbul coverage sequences', async () => {
     const { code, metadata } = await transformAsync(
       dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       const a = 42;
 
@@ -776,7 +776,7 @@ export function run(
   it('should work with String and Number object', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { css } from '@linaria/core';
+      import { css } from '@exodus/linaria-core';
 
       export const style = css\`
         width: ${'${new String("100%")}'};
@@ -792,7 +792,7 @@ export function run(
   it('should work with generated classnames as selectors', async () => {
     const { code, metadata } = await transpile(
       dedent`
-      import { css } from "@linaria/core";
+      import { css } from "@exodus/linaria-core";
 
       export const text = css\`\`;
 
@@ -812,7 +812,7 @@ export function run(
     const { code, metadata } = await transpile(
       dedent`
       import React from 'react'
-      import {css} from '@linaria/core'
+      import {css} from '@exodus/linaria-core'
 
       export function Component() {
         const opacity = 0.2;
@@ -833,7 +833,7 @@ export function run(
     const { code, metadata } = await transpile(
       dedent`
       import React from 'react'
-      import {css} from '@linaria/core'
+      import {css} from '@exodus/linaria-core'
 
       export function Component() {
         const opacity = 0.2;
@@ -854,8 +854,8 @@ export function run(
     const { code, metadata } = await transpile(
       dedent`
       import React from 'react'
-      import {css} from '@linaria/core'
-      import externalDep from '@linaria/babel-preset/__fixtures__/sample-script';
+      import {css} from '@exodus/linaria-core'
+      import externalDep from '@exodus/linaria-babel-preset/__fixtures__/sample-script';
       const globalObj = {
         opacity: 0.5,
       };
@@ -894,7 +894,7 @@ export function run(
     const { code, metadata } = await transpile(
       dedent`
         import React from 'react'
-        import {css} from '@linaria/core'
+        import {css} from '@exodus/linaria-core'
 
         const globalObj = {
           opacity: 0.5,
@@ -938,7 +938,7 @@ export function run(
     const { code, metadata } = await transpile(
       dedent`
         import React from 'react'
-        import {css} from '@linaria/core'
+        import {css} from '@exodus/linaria-core'
 
         const color = 'red';
 
@@ -958,7 +958,7 @@ export function run(
     const { code, metadata } = await transpile(
       dedent`
         import React from 'react'
-        import {css} from '@linaria/core'
+        import {css} from '@exodus/linaria-core'
 
         const size = () => 5
         export default function Component() {

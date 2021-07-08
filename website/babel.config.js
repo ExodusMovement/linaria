@@ -4,7 +4,7 @@ module.exports = {
     server: {
       presets: [
         ['@babel/preset-env', { targets: { node: 8 } }],
-        require.resolve('@linaria/babel-preset'),
+        require.resolve('@exodus/linaria-babel-preset'),
       ],
       plugins: [
         [

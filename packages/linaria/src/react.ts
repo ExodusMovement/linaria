@@ -1,1 +1,1 @@
-export * from '@linaria/react';
+export * from '@exodus/linaria-react';

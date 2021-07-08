@@ -14,7 +14,7 @@ const options: Partial<StrictOptions> = {
 const transpile = async (input: string) =>
   (await transformAsync(input, {
     babelrc: false,
-    presets: [[require.resolve('@linaria/preeval'), options]],
+    presets: [[require.resolve('@exodus/linaria-preeval'), options]],
     plugins: [
       '@babel/plugin-proposal-class-properties',
       '@babel/plugin-syntax-jsx',
@@ -26,7 +26,7 @@ const transpile = async (input: string) =>
 it('preserves classNames', async () => {
   const { code } = await transpile(
     dedent`
-      import { styled } from '@linaria/react';
+      import { styled } from '@exodus/linaria-react';
 
       const Component = styled.div\`\`;
       `
@@ -38,7 +38,7 @@ it('preserves classNames', async () => {
 it('handles locally named import', async () => {
   const { code } = await transpile(
     dedent`
-      import { styled as custom } from '@linaria/react';
+      import { styled as custom } from '@exodus/linaria-react';
 
       const Component = custom.div\`\`;
       `

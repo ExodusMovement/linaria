@@ -5,7 +5,7 @@ import 'ignore-styles';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { collect } from '@linaria/server';
+import { collect } from '@exodus/linaria-server';
 import Koa from 'koa';
 import Router from 'koa-router';
 import compress from 'koa-compress';

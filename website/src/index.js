@@ -1,6 +1,6 @@
 /* @flow */
 
-import { css } from '@linaria/core';
+import { css } from '@exodus/linaria-core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';

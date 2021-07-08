@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 /**
- * This Visitor checks if import of `@linaria/react` was renamed and stores that information in state
+ * This Visitor checks if import of `@exodus/linaria-react` was renamed and stores that information in state
  */
 
 import type { ImportDeclaration } from '@babel/types';
@@ -13,7 +13,7 @@ export default function DetectStyledImportName(
   path: NodePath<ImportDeclaration>,
   state: State
 ) {
-  if (!t.isLiteral(path.node.source, { value: '@linaria/react' })) {
+  if (!t.isLiteral(path.node.source, { value: '@exodus/linaria-react' })) {
     return;
   }
 

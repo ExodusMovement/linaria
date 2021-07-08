@@ -305,62 +305,62 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@linaria/babel-preset@^3.0.0-beta.5":
+"@exodus/linaria-babel-preset@^3.0.0-beta.5":
   version "3.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@linaria/babel-preset/-/babel-preset-3.0.0-beta.5.tgz#34088faf49eb5408839c2975b1445ed99b87dd69"
+  resolved "https://registry.yarnpkg.com/@exodus/linaria-babel-preset/-/babel-preset-3.0.0-beta.5.tgz#34088faf49eb5408839c2975b1445ed99b87dd69"
   integrity sha512-mPhf5voj4GkFyDYmllkh50McCW8GucJc+o/YvhP4+9N1lmDg0pp9WRERmV92do9WJ9kJvVAe5joVy9TNZJLnTQ==
   dependencies:
     "@babel/generator" ">=7"
     "@babel/plugin-syntax-dynamic-import" ">=7"
     "@babel/template" ">=7"
-    "@linaria/core" "^3.0.0-beta.4"
-    "@linaria/logger" "^3.0.0-beta.3"
+    "@exodus/linaria-core" "^3.0.0-beta.4"
+    "@exodus/linaria-logger" "^3.0.0-beta.3"
     cosmiconfig "^5.1.0"
     source-map "^0.6.1"
     stylis "^3.5.4"
 
-"@linaria/core@^3.0.0-beta.4":
+"@exodus/linaria-core@^3.0.0-beta.4":
   version "3.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@linaria/core/-/core-3.0.0-beta.4.tgz#ae878874773c15b189792e277771f68fef18019a"
+  resolved "https://registry.yarnpkg.com/@exodus/linaria-core/-/core-3.0.0-beta.4.tgz#ae878874773c15b189792e277771f68fef18019a"
   integrity sha512-NzxeMDxRt57nR6tLFZ8xIstp5ld9JQPIyp9+TKtQZhoX3oJuUru+S4vXPr1Gach6VaqKKKT5T6fmJgJl9MMprw==
 
-"@linaria/logger@^3.0.0-beta.3":
+"@exodus/linaria-logger@^3.0.0-beta.3":
   version "3.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@linaria/logger/-/logger-3.0.0-beta.3.tgz#4bb8f0f36567cea7cac16a60fb3474fbfec491a7"
+  resolved "https://registry.yarnpkg.com/@exodus/linaria-logger/-/logger-3.0.0-beta.3.tgz#4bb8f0f36567cea7cac16a60fb3474fbfec491a7"
   integrity sha512-Z2k0RJuA4PffcZcwBN1By8FmcCvcFUe9GHc846B6hNP09zDVhHSFLKJN9NfXJCzJ/9PifOxSUKyOjLtpv3EhGA==
   dependencies:
     debug "^4.1.1"
 
-"@linaria/react@^3.0.0-beta.4":
+"@exodus/linaria-react@^3.0.0-beta.4":
   version "3.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-3.0.0-beta.4.tgz#3652812d42e8f7bbd2bae0ee7fd468ef0c68ddc9"
+  resolved "https://registry.yarnpkg.com/@exodus/linaria-react/-/react-3.0.0-beta.4.tgz#3652812d42e8f7bbd2bae0ee7fd468ef0c68ddc9"
   integrity sha512-RSlFO3W+77PCtFnDFKVdITLUdBude+zICtumticDU76l5Xc5i0lEUXPDvYjD7s9+uk70K4GSNvgh7bqhkGgxKA==
   dependencies:
     "@emotion/is-prop-valid" "^0.8.8"
-    "@linaria/core" "^3.0.0-beta.4"
+    "@exodus/linaria-core" "^3.0.0-beta.4"
 
-"@linaria/server@^3.0.0-beta.3":
+"@exodus/linaria-server@^3.0.0-beta.3":
   version "3.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@linaria/server/-/server-3.0.0-beta.3.tgz#26493955a25875a685e11fa1c3d7792c425b9152"
+  resolved "https://registry.yarnpkg.com/@exodus/linaria-server/-/server-3.0.0-beta.3.tgz#26493955a25875a685e11fa1c3d7792c425b9152"
   integrity sha512-IQNZennqoZwBXznYvYfEKt2KcEXVDDwkjvmWdGxsKakKnCii1jdtOn0cueBD55/f3vrpidYyBBRNTB1iiS41OA==
   dependencies:
     postcss "^7.0.14"
 
-"@linaria/stylelint@^3.0.0-beta.5":
+"@exodus/linaria-stylelint@^3.0.0-beta.5":
   version "3.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@linaria/stylelint/-/stylelint-3.0.0-beta.5.tgz#a7f38947b9aa832a15f33debc97987aca3f69abe"
+  resolved "https://registry.yarnpkg.com/@exodus/linaria-stylelint/-/stylelint-3.0.0-beta.5.tgz#a7f38947b9aa832a15f33debc97987aca3f69abe"
   integrity sha512-BqiPz891kNdVTwvPHIWQKOYNXzPky4VOnX5VMdPe8IX4VZyP0CHrfMzDx3FQWTntKKqapW2fzy+9sDocG8jyuA==
   dependencies:
-    "@linaria/babel-preset" "^3.0.0-beta.5"
+    "@exodus/linaria-babel-preset" "^3.0.0-beta.5"
     strip-ansi "^5.2.0"
 
-"@linaria/webpack4-loader@^3.0.0-beta.6":
+"@exodus/linaria-webpack4-loader@^3.0.0-beta.6":
   version "3.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@linaria/webpack4-loader/-/webpack4-loader-3.0.0-beta.6.tgz#bf0205fd9d3c0738e6538d08afb5eec33e7bece5"
+  resolved "https://registry.yarnpkg.com/@exodus/linaria-webpack4-loader/-/webpack4-loader-3.0.0-beta.6.tgz#bf0205fd9d3c0738e6538d08afb5eec33e7bece5"
   integrity sha512-6b2E1lHPQ4/QII4QI7zpAU2AuYsQjpsfijM/HehDX39+BamGfMoN0680RHEt7O7XOR7wEGhWICNL7HRNKJHTsg==
   dependencies:
-    "@linaria/babel-preset" "^3.0.0-beta.5"
-    "@linaria/logger" "^3.0.0-beta.3"
+    "@exodus/linaria-babel-preset" "^3.0.0-beta.5"
+    "@exodus/linaria-logger" "^3.0.0-beta.3"
     cosmiconfig "^5.1.0"
     enhanced-resolve "^4.1.0"
     find-yarn-workspace-root "^1.2.1"

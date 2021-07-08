@@ -1,4 +1,4 @@
-import { styled } from '@linaria/react';
+import { styled } from '@exodus/linaria-react';
 
 export const T1 = styled.h1`
   background: #111;

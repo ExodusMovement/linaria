@@ -1,1 +1,1 @@
-export * from '@linaria/server';
+export * from '@exodus/linaria-server';

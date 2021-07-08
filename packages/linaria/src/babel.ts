@@ -1,4 +1,4 @@
-import babel from '@linaria/babel-preset';
+import babel from '@exodus/linaria-babel-preset';
 
 export default babel;
-export * from '@linaria/babel-preset';
+export * from '@exodus/linaria-babel-preset';

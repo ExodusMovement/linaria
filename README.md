@@ -37,13 +37,13 @@ Zero-runtime CSS in JS library.
 ## Installation
 
 ```sh
-npm install @linaria/core @linaria/react @linaria/babel-preset @linaria/shaker
+npm install @exodus/linaria-core @exodus/linaria-react @exodus/linaria-babel-preset @exodus/linaria-shaker
 ```
 
 or
 
 ```sh
-yarn add @linaria/core @linaria/react @linaria/babel-preset @linaria/shaker
+yarn add @exodus/linaria-core @exodus/linaria-react @exodus/linaria-babel-preset @exodus/linaria-shaker
 ```
 
 ## Setup
@@ -78,7 +78,7 @@ See [Configuration](/docs/CONFIGURATION.md) to customize how Linaria processes y
 Linaria can be used with any framework, with additional helpers for React. The basic syntax looks like this:
 
 ```js
-import { css } from '@linaria/core';
+import { css } from '@exodus/linaria-core';
 import { modularScale, hiDPI } from 'polished';
 import fonts from './fonts';
 
@@ -102,7 +102,7 @@ You can use imported variables and functions for logic inside the CSS code. They
 If you're using [React](https://reactjs.org/), you can use the `styled` helper, which makes it easy to write React components with dynamic styles with a styled-component like syntax:
 
 ```js
-import { styled } from '@linaria/react';
+import { styled } from '@exodus/linaria-react';
 import { families, sizes } from './fonts';
 
 // Write your styles in `styled` tag
@@ -170,7 +170,7 @@ Take a look on [Contributing](CONTRIBUTING.md) docs to check how you can run Lin
   For example:
 
   ```js
-  import { css } from '@linaria/core';
+  import { css } from '@exodus/linaria-core';
   import colors from './colors';
 
   const title = css`
@@ -182,7 +182,7 @@ Take a look on [Contributing](CONTRIBUTING.md) docs to check how you can run Lin
 
 ## Interoperability with other CSS-in-JS libraries
 
-Linaria can work together with other CSS-in-JS libraries out-of-the-box. However, if you want to use styled components from Linaria as selectors in `styled-components`/`emotion`, you need to use [@linaria/interop](/packages/interop/README.md)    
+Linaria can work together with other CSS-in-JS libraries out-of-the-box. However, if you want to use styled components from Linaria as selectors in `styled-components`/`emotion`, you need to use [@exodus/linaria-interop](/packages/interop/README.md)    
 
 ## Editor Plugins
 

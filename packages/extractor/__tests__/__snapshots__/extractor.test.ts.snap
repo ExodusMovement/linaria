@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`extractor derives display name from filename 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export default /*#__PURE__*/styled(\\"h1\\")({
   name: \\"FancyName0\\",
   class: \\"FancyName0_f1tjvuuv\\"
@@ -21,7 +21,7 @@ Dependencies: NA
 `;
 
 exports[`extractor derives display name from parent folder name 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export default /*#__PURE__*/styled(\\"h1\\")({
   name: \\"FancyName0\\",
   class: \\"FancyName0_fud4l0y\\"
@@ -90,7 +90,7 @@ exports[`extractor does not strip instanbul coverage sequences 1`] = `
   return coverage[path] = coverageData;
 }();
 
-import { styled } from '@linaria/react';
+import { styled } from '@exodus/linaria-react';
 const a = (cov_2dr9r1nt95.s[0]++, 42);
 export const Title = (cov_2dr9r1nt95.s[1]++, /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
@@ -111,7 +111,7 @@ Dependencies: NA
 `;
 
 exports[`extractor evaluates babel helpers 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 
 function copyAndExtend(a, b) {
   return { ...a,
@@ -145,7 +145,7 @@ Dependencies: NA
 `;
 
 exports[`extractor evaluates complex styles with functions and nested selectors 1`] = `
-"import { css } from '@linaria/core';
+"import { css } from '@exodus/linaria-core';
 export const bareIconClass = \\"bareIconClass_b1t92lw9\\";
 
 const getSizeStyles = fs => ({
@@ -173,7 +173,7 @@ Dependencies: NA
 exports[`extractor evaluates component interpolations 1`] = `
 "const {
   styled
-} = require('@linaria/react');
+} = require('@exodus/linaria-react');
 
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
@@ -203,7 +203,7 @@ Dependencies: NA
 `;
 
 exports[`extractor evaluates dependencies with sequence expression 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 const color = (external, () => 'blue');
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
@@ -227,8 +227,8 @@ Dependencies: NA
 `;
 
 exports[`extractor evaluates expressions with dependencies 1`] = `
-"import { styled } from '@linaria/react';
-import slugify from '@linaria/babel-preset/__fixtures__/slugify';
+"import { styled } from '@exodus/linaria-react';
+import slugify from '@exodus/linaria-babel-preset/__fixtures__/slugify';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"Title_t1t92lw9\\"
@@ -245,14 +245,14 @@ CSS:
   }
 }
 
-Dependencies: @babel/runtime/helpers/interopRequireDefault, @linaria/babel-preset/__fixtures__/slugify
+Dependencies: @babel/runtime/helpers/interopRequireDefault, @exodus/linaria-babel-preset/__fixtures__/slugify
 
 `;
 
 exports[`extractor evaluates expressions with expressions depending on shared dependency 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 
-const slugify = require('@linaria/babel-preset/__fixtures__/slugify').default;
+const slugify = require('@exodus/linaria-babel-preset/__fixtures__/slugify').default;
 
 const boo = t => slugify(t) + 'boo';
 
@@ -274,12 +274,12 @@ CSS:
   }
 }
 
-Dependencies: @linaria/babel-preset/__fixtures__/slugify
+Dependencies: @exodus/linaria-babel-preset/__fixtures__/slugify
 
 `;
 
 exports[`extractor evaluates functions with nested identifiers 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 const objects = {
   key: {
     fontSize: 12
@@ -310,7 +310,7 @@ Dependencies: NA
 `;
 
 exports[`extractor evaluates identifier in scope 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 const answer = 42;
 
 const foo = () => answer;
@@ -337,8 +337,8 @@ Dependencies: NA
 `;
 
 exports[`extractor evaluates imported typescript enums 1`] = `
-"import { styled } from '@linaria/react';
-import { Colors } from '@linaria/babel-preset/__fixtures__/enums';
+"import { styled } from '@exodus/linaria-react';
+import { Colors } from '@exodus/linaria-babel-preset/__fixtures__/enums';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"Title_taxxqrn\\"
@@ -353,12 +353,12 @@ CSS:
   color: #27509A;
 }
 
-Dependencies: @linaria/babel-preset/__fixtures__/enums
+Dependencies: @exodus/linaria-babel-preset/__fixtures__/enums
 
 `;
 
 exports[`extractor evaluates interpolations with sequence expression 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"Title_t1t92lw9\\",
@@ -381,7 +381,7 @@ Dependencies: NA
 `;
 
 exports[`extractor evaluates local expressions 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 const answer = 42;
 
 const foo = () => answer;
@@ -407,9 +407,9 @@ Dependencies: NA
 `;
 
 exports[`extractor evaluates multiple expressions with shared dependency 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 
-const slugify = require('@linaria/babel-preset/__fixtures__/slugify').default;
+const slugify = require('@exodus/linaria-babel-preset/__fixtures__/slugify').default;
 
 const boo = t => slugify(t) + 'boo';
 
@@ -432,12 +432,12 @@ CSS:
   }
 }
 
-Dependencies: @linaria/babel-preset/__fixtures__/slugify
+Dependencies: @exodus/linaria-babel-preset/__fixtures__/slugify
 
 `;
 
 exports[`extractor generates stable class names 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const T1 = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"T1\\",
   class: \\"T1_t16d1w5s\\"
@@ -482,7 +482,7 @@ Dependencies: NA
 exports[`extractor handles complex component 1`] = `
 "// Dead code in this file should be ignored
 import deadDep from 'unknown-dependency';
-import { styled } from '@linaria/react';
+import { styled } from '@exodus/linaria-react';
 export const deadValue = deadDep();
 const objects = {
   font: {
@@ -522,7 +522,7 @@ Dependencies: NA
 `;
 
 exports[`extractor handles escapes properly 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 const selectors = ['a', 'b'];
 export const Block = /*#__PURE__*/styled(\\"div\\")({
   name: \\"Block\\",
@@ -545,7 +545,7 @@ Dependencies: @babel/runtime/helpers/interopRequireDefault, @babel/runtime/helpe
 exports[`extractor handles indirect wrapping another styled component 1`] = `
 "const {
   styled
-} = require('@linaria/react');
+} = require('@exodus/linaria-react');
 
 const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
@@ -583,7 +583,7 @@ exports[`extractor handles wrapping another styled component 1`] = `
 
 const {
   styled
-} = require('@linaria/react');
+} = require('@exodus/linaria-react');
 
 const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
@@ -619,7 +619,7 @@ Dependencies: NA
 `;
 
 exports[`extractor hoistable identifiers 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 {
   var days = 42;
 }
@@ -644,7 +644,7 @@ Dependencies: NA
 `;
 
 exports[`extractor ignores external expressions 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 
 const generate = props => props.content;
 
@@ -672,7 +672,7 @@ Dependencies: NA
 `;
 
 exports[`extractor ignores inline arrow function expressions 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"Title_t1t92lw9\\",
@@ -697,7 +697,7 @@ Dependencies: NA
 `;
 
 exports[`extractor ignores inline vanilla function expressions 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 export const Title = /*#__PURE__*/styled(\\"h1\\")({
   name: \\"Title\\",
   class: \\"Title_t1t92lw9\\",
@@ -724,7 +724,7 @@ Dependencies: NA
 `;
 
 exports[`extractor inlines array styles as CSS string 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 
 const fill = (top = 0, left = 0, right = 0, bottom = 0) => [{
   position: 'absolute'
@@ -754,7 +754,7 @@ Dependencies: NA
 `;
 
 exports[`extractor inlines object styles as CSS string 1`] = `
-"import { styled } from '@linaria/react';
+"import { styled } from '@exodus/linaria-react';
 
 const fill = (top = 0, left = 0, right = 0, bottom = 0) => ({
   position: 'absolute',
@@ -784,7 +784,7 @@ Dependencies: NA
 
 exports[`extractor it should not throw location error for hoisted identifier 1`] = `
 "import React from 'react';
-import { css } from '@linaria/core';
+import { css } from '@exodus/linaria-core';
 
 const size = () => 5;
 
@@ -831,7 +831,7 @@ exports[`extractor non-hoistable identifiers 1`] = `
 
 exports[`extractor should handle shadowed identifier inside components 1`] = `
 "import React from 'react';
-import { css } from '@linaria/core';
+import { css } from '@exodus/linaria-core';
 const color = 'red';
 var _ref = 'blue';
 var _ref2 = {
@@ -858,7 +858,7 @@ Dependencies: NA
 
 exports[`extractor should process \`css\` calls inside components 1`] = `
 "import React from 'react';
-import { css } from '@linaria/core';
+import { css } from '@exodus/linaria-core';
 export function Component() {
   const opacity = 0.2;
   const className = \\"className_c1t92lw9\\";
@@ -882,8 +882,8 @@ Dependencies: NA
 
 exports[`extractor should process \`css\` calls with complex interpolation inside components 1`] = `
 "import React from 'react';
-import { css } from '@linaria/core';
-import externalDep from '@linaria/babel-preset/__fixtures__/sample-script';
+import { css } from '@exodus/linaria-core';
+import externalDep from '@exodus/linaria-babel-preset/__fixtures__/sample-script';
 const globalObj = {
   opacity: 0.5
 };
@@ -921,13 +921,13 @@ CSS:
     }
   }
 
-Dependencies: @babel/runtime/helpers/interopRequireDefault, @linaria/babel-preset/__fixtures__/sample-script
+Dependencies: @babel/runtime/helpers/interopRequireDefault, @exodus/linaria-babel-preset/__fixtures__/sample-script
 
 `;
 
 exports[`extractor should process \`styled\` calls inside components 1`] = `
 "import React from 'react';
-import { css } from '@linaria/core';
+import { css } from '@exodus/linaria-core';
 export function Component() {
   const opacity = 0.2;
   const MyComponent = styled.h1\`
@@ -941,7 +941,7 @@ exports[`extractor should process \`styled\` calls inside components 2`] = `Obje
 
 exports[`extractor should process \`styled\` calls with complex interpolation inside components 1`] = `
 "import React from 'react';
-import { css } from '@linaria/core';
+import { css } from '@exodus/linaria-core';
 const globalObj = {
   opacity: 0.5
 };
@@ -981,7 +981,7 @@ Dependencies: NA
 `;
 
 exports[`extractor should work with String and Number object 1`] = `
-"import { css } from '@linaria/core';
+"import { css } from '@exodus/linaria-core';
 export const style = \\"style_s1t92lw9\\";"
 `;
 
@@ -999,7 +999,7 @@ Dependencies: NA
 `;
 
 exports[`extractor should work with generated classnames as selectors 1`] = `
-"import { css } from \\"@linaria/core\\";
+"import { css } from \\"@exodus/linaria-core\\";
 export const text = \\"text_t1t92lw9\\";
 export const square = \\"square_s1xjmq2i\\";"
 `;
@@ -1021,7 +1021,7 @@ Dependencies: NA
 
 exports[`extractor simplifies react components 1`] = `
 "import React from 'react';
-import { styled } from '@linaria/react';
+import { styled } from '@exodus/linaria-react';
 import constant from './broken-dependency';
 
 const FuncComponent = props => <div>{props.children + constant}</div>;
@@ -1090,7 +1090,7 @@ exports[`extractor throws if couldn't determine a display name 1`] = `
 - Is an object property
 - Is a prop in a JSX element
 
-  1 | import { styled } from '@linaria/react';
+  1 | import { styled } from '@exodus/linaria-react';
   2 |
 > 3 | export default styled.h1\`
     |                ^
