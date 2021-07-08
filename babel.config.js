@@ -14,8 +14,8 @@
  */
 
 const commonJSTargets = {
-  browsers: ['last 2 versions', 'not op_mini all', 'not dead'],
-  node: '10',
+  browsers: ['Chrome 89'],
+  node: '14',
 };
 
 module.exports = {
