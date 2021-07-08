@@ -6,12 +6,8 @@
   },
   "description": "Blazing fast zero-runtime CSS in JS library",
   "main": "lib/index.js",
-  "module": "esm/index.js",
-  "types": "types",
   "files": [
-    "types/",
-    "lib/",
-    "esm/"
+    "lib/**/*.js"
   ],
   "license": "MIT",
   "repository": "git@github.com:callstack/linaria.git",
