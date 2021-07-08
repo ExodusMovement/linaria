@@ -46,7 +46,7 @@
     "@babel/template": ">=7",
     "@exodus/linaria-core": "^3.0.0-beta.4",
     "@exodus/linaria-logger": "^3.0.0-beta.3",
-    "cosmiconfig": "^5.1.0",
+    "cosmiconfig": "^5.0.7",
     "source-map": "^0.7.3",
     "stylis": "^3.5.4"
   },
