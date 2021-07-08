@@ -12,7 +12,7 @@
     "check:all": "yarn test:dts && yarn typecheck && yarn test && yarn lint",
     "clean": "del 'packages/*/{coverage,esm,lib,types,tsconfig.tsbuildinfo}'",
     "lint": "eslint --ext .js,.ts,.tsx .",
-    "prepare": "lerna-to-typescript-project-references --update && yarn lerna run prepare",
+    "prepare": "lerna-to-typescript-project-references --update && yarn lerna run build:lib",
     "release": "release-it",
     "test": "yarn lerna run test",
     "test:coverage": "yarn lerna run test -- -- --coverage",
