@@ -39,7 +39,7 @@
     "react-test-renderer": "^16.8.3"
   },
   "dependencies": {
-    "@emotion/is-prop-valid": "^0.8.8",
+    "@exodus/emotion-is-prop-valid": "^1.0.0-exodus.0",
     "@exodus/linaria-core": "^3.0.0-beta.4"
   },
   "peerDependencies": {

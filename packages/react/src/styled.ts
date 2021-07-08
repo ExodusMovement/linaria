@@ -5,7 +5,7 @@
  * - injects CSS variables used to define dynamic styles based on props
  */
 import * as React from 'react';
-import validAttr from '@emotion/is-prop-valid';
+import validAttr from '@exodus/emotion-is-prop-valid';
 import { cx } from '@exodus/linaria-core';
 import type { CSSProperties, StyledMeta } from '@exodus/linaria-core';
 
